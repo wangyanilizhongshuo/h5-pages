@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新闻详情</title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script type="text/javascript" >
+        var strArr = [];   
+        // var url=window.location.href;
+        var url='http://www.baidu.com?news_id=4&user_token=76ba0047d1bf434dd2996ced0c2ff2fd83b24cc60008b0751bd67b40c79b1e414ad63e9da9d2ec494b144b615ecd2a6e13d19ffc5a50599801370340f86116b3ab492e032206004bac918bffd18ba36850864eb84a6edb52e484895c5068db04'
+        var news_id='';
+        var token='';
+        var title='';
+        var content='';
+        var img="";
+        getString(url);
+        function getString(url){
+            var arr = url.split('?')
+            var params = arr[1];
+            var arr1 = params.split('&');
+            var o = {}
+            for (var i = 0; i < arr1.length; i++) {
+            var a = arr1[i].split('=');
+              strArr[a[0]] = a[1];
+            }
+            return strArr;
+         }      
+         news_id=strArr.news_id;
+         token=strArr.user_token;
+        // $.ajax({url: 'http://ceshiaccounthome.hzbixin.cn/home/news?news_id='+news_id+'&user_token='+token, success: function(res){
+        //   var tt=(JSON.parse(res))  
+        //   console.log(tt)
+        //  }});
+        
+          
+        </script>
+        <script type="text/javascript" >
+       alert($('#container'));//aaa bbb
+       console.log($('#container'))
+        </script>
+</head>
+<body>
+    <div class="h5-container">
+          <div class="title ">
+              <div class="title-word stylePad">
+                Youtube删除多个行业大V视频 加密货币相关内容被归为“有害信息“
+              </div>
+              <div class="title-time stylePad">2019-02-12 19:09:02</div>
+          </div>
+    	  <img class="imgs" src="http://hzbxlajifenlei.oss-cn-hangzhou.aliyuncs.com/picture/202005/12/158927110352762.png"></img>
+          <div class="contents stylePad">
+            PANews 12月25日消息，据NewBTC报道，有关Youtube平台上
+            ，多个加密货币行业大V的视频被删除，平台或将关闭加密货币行
+            业频道的讨论在Twitter上备受关注。 据Cryptoiq报道，           
+           YouTube正在审查与加密货币有关视频，起初在没有任何警示下
+            “Boxming”Gu等多个顶级大V的频道受到了冲击，其中Nugget's
+        </div>
+        <button class="btn1">王一博</button>
+        <div class="text">dfajsdlf;jsadfd</div>
+        <button class="btn2">王亚妮</button>
+        <div id="container">
+          aaa
+          <div>bbb</div>
+      </div>
+       
+    </div>
+</body>
+</html>
